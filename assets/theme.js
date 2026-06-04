@@ -1,4 +1,4 @@
-/* BakerLand Cafe — theme JS. Native APIs only. */
+/* BakerLand Cafe - theme JS. Native APIs only. */
 (function () {
   // 1. Scroll reveal via IntersectionObserver
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
