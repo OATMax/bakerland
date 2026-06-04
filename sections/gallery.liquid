@@ -1,0 +1,23 @@
+<section class="gallery" id="gallery">
+  <div class="gallery-head reveal">
+    <span class="eyebrow">From the case</span>
+    <h2 class="display section-h2">Baked this morning. <em class="serif-italic">Probably gone by tonight.</em></h2>
+    <p class="gallery-sub">A rotating case of pastries, cakes, and seasonal specialties. Walk in to see whats fresh today.</p>
+  </div>
+  <div class="gallery-grid">
+    {%- assign tiles = 'photo_03,photo_07,photo_02,photo_01,photo_05,photo_10,photo_08,photo_12' | split: ',' -%}
+    {%- for tile in tiles -%}
+      <figure class="gallery-tile reveal reveal-d-{% cycle '1','2','3','4' %}">
+        <img src="{{ tile | append: '.webp' | asset_url }}" alt="A photograph from the BakerLand pastry case" loading="lazy">
+      </figure>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Gallery",
+  "settings": [],
+  "presets": [{"name": "Gallery"}]
+}
+{% endschema %}

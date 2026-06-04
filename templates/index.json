@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "hero": { "type": "hero" },
+    "about": { "type": "about" },
+    "gallery": { "type": "gallery" },
+    "visit": { "type": "visit" },
+    "coming-soon": { "type": "coming-soon" }
+  },
+  "order": ["hero", "about", "gallery", "visit", "coming-soon"]
+}

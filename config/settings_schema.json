@@ -1,0 +1,45 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "BakerLand",
+    "theme_version": "1.0.0",
+    "theme_author": "OAT Marketing",
+    "theme_documentation_url": "https://github.com/OATMax/bakerland",
+    "theme_support_url": "https://github.com/OATMax/bakerland/issues"
+  },
+  {
+    "name": "Cafe contact",
+    "settings": [
+      {
+        "type": "text",
+        "id": "cafe_name",
+        "label": "Cafe name",
+        "default": "BakerLand Cafe"
+      },
+      {
+        "type": "text",
+        "id": "cafe_phone",
+        "label": "Phone",
+        "default": "(346) 391-5051"
+      },
+      {
+        "type": "text",
+        "id": "cafe_address",
+        "label": "Street address",
+        "default": "14021 Southwest Fwy, Suite 409A, Sugar Land, TX 77478"
+      },
+      {
+        "type": "text",
+        "id": "cafe_hours",
+        "label": "Hours summary",
+        "default": "Open daily, 6 AM – 12 AM"
+      },
+      {
+        "type": "url",
+        "id": "cafe_map_url",
+        "label": "Google Maps URL",
+        "default": "https://maps.google.com/?q=BakerLand+Cafe+14021+Southwest+Fwy+Sugar+Land+TX"
+      }
+    ]
+  }
+]

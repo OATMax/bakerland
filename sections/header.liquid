@@ -1,0 +1,36 @@
+<header class="site-header" data-stick>
+  <div class="site-header-inner">
+    <a href="/" class="site-brand" aria-label="{{ settings.cafe_name }}">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#8C4A2F"/>
+          <path d="M11 22 Q15 13 20 22 Q25 13 29 22 L29 26 Q20 30 11 26 Z" fill="#FBF4E6"/>
+          <circle cx="16" cy="20" r="1.4" fill="#8C4A2F"/>
+          <circle cx="20" cy="19" r="1.4" fill="#8C4A2F"/>
+          <circle cx="24" cy="20" r="1.4" fill="#8C4A2F"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">BakerLand</span>
+        <span class="brand-tag">Cafe &middot; Sugar Land, TX</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#gallery">Pastries</a>
+      <a href="#visit">Visit</a>
+      <a href="#coming-soon">Online soon</a>
+    </nav>
+    <a href="tel:{{ settings.cafe_phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}" class="btn btn-cta">
+      <span class="btn-icon" aria-hidden="true">&#9742;</span>
+      <span>{{ settings.cafe_phone }}</span>
+    </a>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}

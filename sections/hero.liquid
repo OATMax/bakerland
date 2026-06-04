@@ -1,0 +1,37 @@
+{%- assign hero_image = section.settings.hero_image | default: 'photo_03.webp' -%}
+<section class="hero" id="top" style="background-image: linear-gradient(110deg, rgba(48,28,18,0.78), rgba(48,28,18,0.55) 60%, rgba(48,28,18,0.40)), url({{ hero_image | asset_url }});">
+  <div class="hero-overlay-dots" aria-hidden="true"></div>
+  <div class="hero-inner reveal">
+    <span class="hero-eyebrow">{{ section.settings.eyebrow | default: 'Now open in Sugar Land' }}</span>
+    <h1 class="hero-h1 display">{{ section.settings.h1_main | default: 'Sweet things,' }} <span class="hero-h1-accent">{{ section.settings.h1_accent | default: 'fresh every morning.' }}</span></h1>
+    <p class="hero-sub">{{ section.settings.subhead | default: 'A halal-friendly cafe on the southwest side of Houston. Pastries baked daily, coffee pulled all day, and a quiet corner for late-night sweets.' }}</p>
+    <div class="hero-cta-row">
+      <a href="#visit" class="btn btn-primary">{{ section.settings.cta_primary | default: 'Plan a visit' }} <span aria-hidden="true">&rarr;</span></a>
+      <a href="tel:{{ settings.cafe_phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}" class="btn btn-ghost-light">{{ settings.cafe_phone }}</a>
+    </div>
+    <div class="hero-meta">
+      <span class="hero-meta-dot"></span>
+      <span>4.5&starf; on Google &middot; 312 reviews</span>
+      <span class="hero-meta-sep" aria-hidden="true">&middot;</span>
+      <span>{{ settings.cafe_hours }}</span>
+    </div>
+  </div>
+  <a href="#about" class="hero-scroll-cue" aria-label="Scroll to content">
+    <span class="hero-scroll-line" aria-hidden="true"></span>
+  </a>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {"type": "image_picker", "id": "hero_image", "label": "Hero background photo"},
+    {"type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Now open in Sugar Land"},
+    {"type": "text", "id": "h1_main", "label": "Headline main", "default": "Sweet things,"},
+    {"type": "text", "id": "h1_accent", "label": "Headline accent", "default": "fresh every morning."},
+    {"type": "textarea", "id": "subhead", "label": "Sub-headline", "default": "A halal-friendly cafe on the southwest side of Houston. Pastries baked daily, coffee pulled all day, and a quiet corner for late-night sweets."},
+    {"type": "text", "id": "cta_primary", "label": "Primary CTA label", "default": "Plan a visit"}
+  ],
+  "presets": [{"name": "Hero"}]
+}
+{% endschema %}

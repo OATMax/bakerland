@@ -1,0 +1,43 @@
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <span class="eyebrow">About BakerLand</span>
+      <h2 class="display section-h2">A neighborhood bakery for <em class="serif-italic">all day, every craving.</em></h2>
+      <p>{{ section.settings.body_p1 | default: 'BakerLand opened in Sugar Land to do one thing well: bake the kind of pastries you remember from a great trip and pair them with coffee that earns the third visit. Turkish-style baklava, layered cheesecakes, fresh croissants, fruit tarts, and a rotating case of seasonal cakes - all from our kitchen, all made the morning of.' }}</p>
+      <p>{{ section.settings.body_p2 | default: 'We are halal-friendly, family-run, and open from 6 in the morning until midnight. Whether you stop in for a 7 AM coffee, a working afternoon on the terrace, or a late-night chocolate fix, the case is full and the espresso machine is on.' }}</p>
+      <div class="about-stats">
+        <div class="about-stat">
+          <span class="about-stat-n display">4.5<span class="about-stat-star">&starf;</span></span>
+          <span class="about-stat-l">312 Google reviews</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat-n display">6&thinsp;&ndash;&thinsp;12</span>
+          <span class="about-stat-l">Open 18 hours daily</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat-n display">Halal</span>
+          <span class="about-stat-l">Friendly menu &middot; Houston</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-media reveal reveal-r">
+      <figure class="about-figure about-figure-1">
+        <img src="{{ 'photo_07.webp' | asset_url }}" alt="A bakery case at BakerLand displaying tiramisu cups, chocolate desserts, and raspberry hearts" width="540" height="720" loading="lazy">
+      </figure>
+      <figure class="about-figure about-figure-2 float-soft">
+        <img src="{{ 'photo_01.webp' | asset_url }}" alt="Rows of berry-topped cupcakes in the BakerLand display" width="320" height="430" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About",
+  "settings": [
+    {"type": "textarea", "id": "body_p1", "label": "Paragraph 1"},
+    {"type": "textarea", "id": "body_p2", "label": "Paragraph 2"}
+  ],
+  "presets": [{"name": "About"}]
+}
+{% endschema %}
