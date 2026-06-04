@@ -1,3 +1,7 @@
+{%- assign cafe_phone = settings.cafe_phone | default: '(346) 391-5051' -%}
+{%- assign cafe_address = settings.cafe_address | default: '14021 Southwest Fwy, Suite 409A, Sugar Land, TX 77478' -%}
+{%- assign cafe_hours = settings.cafe_hours | default: 'Open daily, 6 AM – 12 AM' -%}
+{%- assign cafe_map_url = settings.cafe_map_url | default: 'https://maps.google.com/?q=BakerLand+Cafe+14021+Southwest+Fwy+Sugar+Land+TX' -%}
 <section class="visit" id="visit">
   <div class="visit-inner">
     <div class="visit-text reveal">
@@ -6,36 +10,36 @@
       <p>Find us in the Sugar Land plaza off the Southwest Freeway. Plenty of parking, terrace seating, and a counter full of fresh pastries from 6 AM to midnight, every day of the week.</p>
 
       <div class="visit-rows">
-        <a class="visit-row visit-row-phone" href="tel:{{ settings.cafe_phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">
+        <a class="visit-row visit-row-phone" href="tel:{{ cafe_phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">
           <span class="visit-icon" aria-hidden="true">&#9742;</span>
           <span class="visit-row-text">
             <span class="visit-row-label">Call us</span>
-            <span class="visit-row-value display">{{ settings.cafe_phone }}</span>
+            <span class="visit-row-value display">{{ cafe_phone }}</span>
           </span>
         </a>
         <div class="visit-row">
           <span class="visit-icon" aria-hidden="true">&#9873;</span>
           <span class="visit-row-text">
             <span class="visit-row-label">Visit</span>
-            <span class="visit-row-value">{{ settings.cafe_address }}</span>
+            <span class="visit-row-value">{{ cafe_address }}</span>
           </span>
         </div>
         <div class="visit-row">
           <span class="visit-icon" aria-hidden="true">&#9201;</span>
           <span class="visit-row-text">
             <span class="visit-row-label">Hours</span>
-            <span class="visit-row-value">{{ settings.cafe_hours }}</span>
+            <span class="visit-row-value">{{ cafe_hours }}</span>
           </span>
         </div>
       </div>
 
-      <a href="{{ settings.cafe_map_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary visit-cta">Get directions <span aria-hidden="true">&rarr;</span></a>
+      <a href="{{ cafe_map_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary visit-cta">Get directions <span aria-hidden="true">&rarr;</span></a>
     </div>
 
     <div class="visit-map reveal reveal-r">
       <iframe
         title="Map to BakerLand Cafe in Sugar Land, TX"
-        src="https://www.google.com/maps?q={{ settings.cafe_address | url_encode }}&output=embed"
+        src="https://www.google.com/maps?q={{ cafe_address | url_encode }}&output=embed"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>

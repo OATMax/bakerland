@@ -1,3 +1,7 @@
+{%- assign cafe_name = settings.cafe_name | default: 'BakerLand Cafe' -%}
+{%- assign cafe_phone = settings.cafe_phone | default: '(346) 391-5051' -%}
+{%- assign cafe_address = settings.cafe_address | default: '14021 Southwest Fwy, Suite 409A, Sugar Land, TX 77478' -%}
+{%- assign cafe_hours = settings.cafe_hours | default: 'Open daily, 6 AM – 12 AM' -%}
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -13,17 +17,17 @@
       </span>
     </div>
     <div class="footer-meta">
-      <p>{{ settings.cafe_address }}</p>
-      <p><a href="tel:{{ settings.cafe_phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{{ settings.cafe_phone }}</a> &middot; {{ settings.cafe_hours }}</p>
+      <p>{{ cafe_address }}</p>
+      <p><a href="tel:{{ cafe_phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{{ cafe_phone }}</a> &middot; {{ cafe_hours }}</p>
     </div>
     <div class="footer-fine">
-      &copy; {{ 'now' | date: '%Y' }} {{ settings.cafe_name }}. Made fresh.
+      &copy; {{ 'now' | date: '%Y' }} {{ cafe_name }}. Made fresh.
     </div>
   </div>
 </footer>
 
-<a href="tel:{{ settings.cafe_phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}" class="mobile-cta">
-  <span aria-hidden="true">&#9742;</span> Call {{ settings.cafe_phone }}
+<a href="tel:{{ cafe_phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}" class="mobile-cta">
+  <span aria-hidden="true">&#9742;</span> Call {{ cafe_phone }}
 </a>
 
 {% schema %}
