@@ -5,16 +5,7 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="18" fill="#FBF4E6"/>
-          <path d="M11 22 Q15 13 20 22 Q25 13 29 22 L29 26 Q20 30 11 26 Z" fill="#8C4A2F"/>
-        </svg>
-      </span>
-      <span class="footer-brand-text">
-        <span class="footer-brand-name">BakerLand</span>
-        <span class="footer-brand-sub">Cafe &middot; Sugar Land, TX</span>
-      </span>
+      <img class="footer-logo" src="{{ 'logo-light.svg' | asset_url }}" alt="{{ cafe_name }}" width="788" height="396">
     </div>
     <div class="footer-meta">
       <p>{{ cafe_address }}</p>
