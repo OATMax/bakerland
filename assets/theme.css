@@ -176,9 +176,9 @@ a { color: inherit; }
   text-decoration: none;
   color: inherit;
 }
-.site-logo { height: 46px; width: auto; display: block; }
-.footer-logo { height: 52px; width: auto; display: block; }
-@media (max-width: 600px) { .site-logo { height: 38px; } }
+.site-logo { height: 60px; width: auto; display: block; }
+.footer-logo { height: 68px; width: auto; display: block; }
+@media (max-width: 600px) { .site-logo { height: 50px; } }
 .brand-mark { display: inline-flex; flex-shrink: 0; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name {
